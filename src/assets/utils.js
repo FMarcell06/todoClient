@@ -25,4 +25,5 @@ export const addTodo=async(task)=>{
 export const setDone=async(id)=>{
     await axios.patch(`${baseUrl}todos/${id}`)
 }
+
 //osszes torlese

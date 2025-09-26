@@ -5,13 +5,15 @@ import './App.css'
 import { use } from 'react'
 import {Todo} from './components/Todo'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Login} from './components/Login'
+
 
 
 function App() {
-  const [isLoggedIn,setIsLoggedIn] = useState(true)
+  const [isLoggedIn,setIsLoggedIn] = useState(false)
   return (
     <>
-      {isLoggedIn && <Todo/>}
+      {isLoggedIn ? <Todo setIsLoggedIn={setIsLoggedIn}/> : <Login setIsLoggedIn={setIsLoggedIn}/>}
     </>
   )
 }

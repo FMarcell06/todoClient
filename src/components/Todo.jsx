@@ -9,7 +9,7 @@ import { TodoSummary } from "./TodoSummary";
 import { useEffect } from "react";
 import { addTodo, deleteTodo, getTodos, setDone } from "../assets/utils";
 
-export const Todo = () => {
+export const Todo = ({setIsLoggedIn}) => {
   const [todos, setTodos] = useState(null);
   console.log("renderelodik a Todo",todos);
 
@@ -51,6 +51,7 @@ export const Todo = () => {
       {console.log(todos)
       }
       {todos&&<TodoSummary todos={todos}/>}
+      <Button onClick={()=>setIsLoggedIn(false)} style={{position:"fixed",top:"5px",right:"5px"}}>Kijelentkezés</Button>
     </div>
   );
 };
